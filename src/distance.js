@@ -1,3 +1,6 @@
+// src/distance.js
+'use strict';
+
 function Distance3(options) {
   this.options = options;
 }
@@ -15,6 +18,13 @@ Distance3.prototype.sqVectorToVector = function(v1, v2) {
 };
 
 Distance3.prototype.vectorToVector = function(v1, v2) {
+  let Vector = this.options.Vector;
+
+  let dv = Vector.difference(v1, v2);
+  return Vector.magnitude(dv);
+};
+
+Distance3.prototype.vectorToPlane = function(v1, v2) {
   let Vector = this.options.Vector;
 
   let dv = Vector.difference(v1, v2);

@@ -2,7 +2,7 @@
   "name": "fast-math-experiment",
   "version": "1.0.0",
   "description": "javascript math performance tester",
-  "main": "src/math.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },

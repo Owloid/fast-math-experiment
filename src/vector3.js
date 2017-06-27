@@ -1,4 +1,4 @@
-// vector3.js
+// src/vector3.js
 'use strict';
 
 function create(x, y, z) {
