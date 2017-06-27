@@ -1,7 +1,7 @@
 const assert = require('assert');
-const math = require('../src/math.js')
+const math = require('../src/math.js');
 const vector3 = math.vector3;
-const distance3 = math.distance3;
+const distance3 = math.distance3.create({ Vector: vector3 });
 
 describe('vector3', function() {
   var vectors;
@@ -17,7 +17,7 @@ describe('vector3', function() {
     vectors[7] = vector3.create(8, 10, 3);
   });
   afterEach(function(){
-    expected = [];
+    var expected = [];
     expected[0] = vector3.create(1, 2, 3);
     expected[1] = vector3.create(4, 8, 3);
     expected[2] = vector3.create(5, 0, 3);
@@ -128,7 +128,7 @@ describe('distance3', function() {
     vectors[7] = vector3.create(8, 10, 3);
   });
   afterEach(function(){
-    expected = [];
+    var expected = [];
     expected[0] = vector3.create(1, 2, 3);
     expected[1] = vector3.create(4, 8, 3);
     expected[2] = vector3.create(5, 0, 3);

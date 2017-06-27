@@ -1,7 +1,7 @@
 {
   "name": "fast-math-experiment",
   "version": "1.0.0",
-  "description": "",
+  "description": "javascript math performance tester",
   "main": "src/math.js",
   "scripts": {
     "test": "mocha"
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Owloid/fast-math-experiment#readme",
   "devDependencies": {
+    "eslint": "^4.1.1",
     "mocha": "^3.4.2"
   }
 }

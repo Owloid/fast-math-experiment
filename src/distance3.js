@@ -1,16 +1,25 @@
-const vector3 = require('./vector3');
-
-function sqVectorToVector(v1, v2) {
-  let dv = vector3.difference(v1, v2);
-  return vector3.sqMagnitude(dv);
+function Distance3(options) {
+  this.options = options;
 }
-exports.sqVectorToVector = sqVectorToVector;
 
-function vectorToVector(v1, v2) {
-  let dv = vector3.difference(v1, v2);
-  return vector3.magnitude(dv);
+function create(options) {
+  return new Distance3(options);
 }
-exports.vectorToVector = vectorToVector;
+exports.create = create;
+
+Distance3.prototype.sqVectorToVector = function(v1, v2) {
+  let Vector = this.options.Vector;
+
+  let dv = Vector.difference(v1, v2);
+  return Vector.sqMagnitude(dv);
+};
+
+Distance3.prototype.vectorToVector = function(v1, v2) {
+  let Vector = this.options.Vector;
+
+  let dv = Vector.difference(v1, v2);
+  return Vector.magnitude(dv);
+};
 
 // TODO
 /*
